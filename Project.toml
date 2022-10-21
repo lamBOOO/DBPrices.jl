@@ -1,0 +1,8 @@
+name = "dbprices"
+uuid = "2923dba4-f6e8-463c-8f59-f7f9b205604b"
+authors = ["Lambert Theisen <lambert.theisen@rwth-aachen.de>"]
+version = "0.1.0"
+
+[deps]
+NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
+TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"
