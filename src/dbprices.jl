@@ -46,10 +46,6 @@ function prices(from::Integer, to::Integer; date=Dates.now(), opts=DEF_OPTS)
   return res
 end
 
-AACHEN_HBF = 8000001
-STUTTGART_HBF = 8000096
-date = ZonedDateTime(DateTime(2022,10,23,7,39,0,0), tz"Europe/Warsaw")
-prices(AACHEN_HBF, STUTTGART_HBF, date=date)
 
 # for i=0:10
 #   newdate = date+Day(i)
