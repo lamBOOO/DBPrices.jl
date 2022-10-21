@@ -46,12 +46,4 @@ function prices(from::Integer, to::Integer; date=Dates.now(), opts=DEF_OPTS)
   return res
 end
 
-
-# for i=0:10
-#   newdate = date+Day(i)
-#   res = prices(AACHEN_HBF, STUTTGART_HBF, date=newdate)
-#   journey = res[1]
-#   println(string(dayofweek(newdate)) * "," * string(newdate) * "," * string(journey["price"]["amount"]))
-# end
-
 end # module DBPrices
