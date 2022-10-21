@@ -3,23 +3,23 @@ using TimeZones
 using Dates
 
 opts1 = Dict(
-	:class => 2,
+  :class => 2,
   # 1st class or 2nd class
-	:noICETrains => false,
-	:transferTime => 0,
+  :noICETrains => false,
+  :transferTime => 0,
   # in minutes
-	:duration => 1440,
+  :duration => 1440,
   # search for routes in the next n minutes
-	:preferFastRoutes => true,
-	:travellers => [ # one or more
+  :preferFastRoutes => true,
+  :travellers => [ # one or more
     Dict(
-		:bc =>	0,
-    # BahnCard ID (see https://gist.github.com/juliuste/202bb04f450a79f8fa12a2ec3abcd72d)
-		:typ => "E",
-    # E: adult: K: child; B: baby -- BUG: child and baby dont work ATM
-		:alter => 30
-    # age
-	  )
+      :bc => 0,
+      # BahnCard ID (see https://gist.github.com/juliuste/202bb04f450a79f8fa12a2ec3abcd72d)
+      :typ => "E",
+      # E: adult: K: child; B: baby -- BUG: child and baby dont work ATM
+      :alter => 30
+      # age
+    )
   ],
 )
 
