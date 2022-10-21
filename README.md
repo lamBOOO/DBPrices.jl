@@ -2,6 +2,12 @@
 
 A Julia wrapper for the [`db-prices`](https://github.com/juliuste/db-prices) javascript module from [@juliuste](https://github.com/juliuste).
 
+Exports one function
+```julia
+prices(from::Integer, to::Integer, date=Dates.now(), opts = DEF_OPTS)
+```
+to get Deutsche Bahn (DB) journey information.
+
 ## Installation
 
 ```julia
@@ -10,7 +16,38 @@ using Pkg
 Pkg.activate(".")
 ```
 
-## Usage
+## `prices` function
+
+```julia
+DEF_OPTS = Dict(
+  :class => 2,
+  # 1st class or 2nd class
+  :noICETrains => false,
+  :transferTime => 0,
+  # in minutes
+  :duration => 1440,
+  # search for routes in the next n minutes
+  :preferFastRoutes => true,
+  :travellers => [ # one or more
+    Dict(
+    :bc =>  0,
+    # BahnCard ID (see https://gist.github.com/juliuste/202bb04f450a79f8fa12a2ec3abcd72d)
+    :typ => "E",
+    # E: adult: K: child; B: baby -- BUG: child and baby dont work ATM
+    :alter => 30
+    # age
+    )
+  ],
+)
+
+# API, same in in @juliuste/db-prices
+# db station integers can be obtained from @derhuerst/db-stations
+# https://github.com/derhuerst/db-stations/
+prices(from::Integer, to::Integer, date=Dates.now(), opts = DEF_OPTS)
+```
+
+
+## Tutorial
 
 ```julia
 julia> results = prices(8000001, 8000096);
