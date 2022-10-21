@@ -1,6 +1,7 @@
 using JSON
 using Dates
 using NodeJS
+using TimeZones
 
 DEF_OPTS = Dict(
 	:class => 2,
