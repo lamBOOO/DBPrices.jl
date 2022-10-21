@@ -1,9 +1,10 @@
-name = "dbprices"
-uuid = "2923dba4-f6e8-463c-8f59-f7f9b205604b"
+name = "DBPrices"
+uuid = "b2bafbbc-11bd-488f-9f41-140b45b72e75"
 authors = ["Lambert Theisen <lambert.theisen@rwth-aachen.de>"]
 version = "0.1.0"
 
 [deps]
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 JSON = "682c06a0-de6a-54ab-a142-c8b1cf79cde6"
 NodeJS = "2bd173c7-0d6d-553b-b6af-13a54713934c"
 TimeZones = "f269a46b-ccf7-5d73-abea-4c690281aa53"

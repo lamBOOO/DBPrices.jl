@@ -1,7 +1,11 @@
-using JSON
+module DBPrices
+
 using Dates
+using JSON
 using NodeJS
 using TimeZones
+
+export prices
 
 DEF_OPTS = Dict(
 	:class => 2,
@@ -54,4 +58,4 @@ prices(AACHEN_HBF, STUTTGART_HBF, date=date)
 #   println(string(dayofweek(newdate)) * "," * string(newdate) * "," * string(journey["price"]["amount"]))
 # end
 
-
+end # module DBPrices
