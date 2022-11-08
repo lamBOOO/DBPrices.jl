@@ -45,7 +45,7 @@ for i=0:27
     string(dayofweek(newdate)) * "," * string(newdate) * "," * string(price)
   )
 end
-plot(Date.(dates_ar1), prices_ar1, marker=:circle, labels="Ticket Price", xaxis="Date", yaxis="Ticket price", title="DB Prices for MO 7:39 AC -> STU")
+plot(Date.(dates_ar1), prices_ar1, marker=:circle, labels="Ticket Price", xaxis="Date", yaxis="Ticket price", title="DB Prices for MO 7:39 AC -> STU") |> display
 
 date2 = ZonedDateTime(DateTime(2022,10,27,15,23,0,0), tz"Europe/Warsaw")
 dates_ar2 = []
@@ -66,4 +66,4 @@ for i=0:27
     string(dayofweek(newdate)) * "," * string(newdate) * "," * string(price)
   )
 end
-plot(Date.(dates_ar2), prices_ar2, marker=:circle, labels="Ticket Price", xaxis="Date", yaxis="Ticket price", title="DB Prices for DO 15:23 STU -> AC")
+plot(Date.(dates_ar2), prices_ar2, marker=:circle, labels="Ticket Price", xaxis="Date", yaxis="Ticket price", title="DB Prices for DO 15:23 STU -> AC") |> display
